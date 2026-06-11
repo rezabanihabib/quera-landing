@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* fonts */
+@font-face {
+  font-family: "Vazirmatn";
+  src:
+    url(../src/assets/fonts/vazirmatn/Vazirmatn[wght].woff2)
+      format("woff2 supports variations"),
+    url(../src/assets/fonts/vazirmatn/Vazirmatn[wght].woff2)
+      format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+.farsi_digits {
+  font-feature-settings: "ss01";
+}
+
+.tabular_numbers {
+  font-feature-settings: "tnum";
+}
+
+@theme {
+  --font-Vazirmatn: Vazirmatn, system-ui, sans-serif;
+
+  --color-primary-light: #2c7ef8;
+  --color-primary-dark: #3a86f8;
+  --color-primary-hover-light: #075cd9;
+  --color-primary-hover-dark: #6ba4fa;
+  --color-on-primary: #ffffff;
+
+  --color-background-light: #ffffff;
+  --color-background-dark: #040810;
+  --color-on-background-light: #191c1e;
+  --color-on-background-dark: #e6e9ef;
+  --color-surface-light: #ffffff;
+  --color-surface-dark: #e6e9ef;
+
+  --color-custome-neutral-50: #ffffff;
+  --color-custome-neutral-100: #fefefe;
+  --color-custome-neutral-200: #f5f6f8;
+  --color-custome-neutral-300: #e1e0e5;
+  --color-custome-neutral-400: #c8c7cb;
+  --color-custome-neutral-500: #afaeb2;
+  --color-custome-neutral-600: #7d7d7f;
+  --color-custome-neutral-700: #646466;
+  --color-custome-neutral-800: #323233;
+  --color-custome-neutral-900: #000000;
+
+  --color-success: #90f677;
+  --color-danger: #e63946;
+}
+
+.bg-gradient {
+  background-image: linear-gradient(180deg, #ebf3ff -7.33%, #ffffff 76.21%);
+  @variant dark {
+    background-image: linear-gradient(
+      180deg,
+      rgba(2, 103, 255, 0.25) -25.32%,
+      rgba(26, 32, 44, 0) 88.96%
+    );
+  }
+}
